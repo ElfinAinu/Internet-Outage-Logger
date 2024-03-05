@@ -96,7 +96,7 @@ def log_data(data: dict, file_path: str):
     if previous_reup:
         data["PreviousReup"] = previous_reup
 
-    selected_keys = ["Date", "DropTime", "ReupTime", "Duration", "TimeFromLast", "PreviousReup"]
+    selected_keys = ["Date", "DropTime", "ReupTime", "Duration", "TimeFromLast"]
     file_exists = os.path.isfile(file_path)
     with open(file_path, mode="a", newline="") as file:
         writer = csv.DictWriter(file, fieldnames=selected_keys)
